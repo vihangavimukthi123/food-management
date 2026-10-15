@@ -2,7 +2,6 @@ import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon, ClockIcon } from 'lucide-react';
 import { useAccount } from '../contexts/StoreContext';
-import { WelcomeOverlay } from '../components/dashboard/WelcomeOverlay';
 import { TodayPlan } from '../components/dashboard/TodayPlan';
 import { CoachQuickAsk } from '../components/dashboard/CoachQuickAsk';
 import { KitchenPulse } from '../components/dashboard/KitchenPulse';
@@ -39,7 +38,6 @@ export function Dashboard() {
 
   return (
     <div className="grain bg-[#f1e6cf] text-cocoa">
-      <WelcomeOverlay name={profile.name} />
       <DriftingLeaves color="#b8913f" opacity={0.18} leaves={[{ x: 92, y: 6, size: 60, rotate: -24, shape: 'sprig', duration: 20 }, { x: 2, y: 40, size: 36, rotate: 18, shape: 'leaf', duration: 16 }]} />
       <div className="mx-auto max-w-[1440px] px-5 pb-24 pt-24 lg:px-8 lg:pt-28">
         {/* Greeting + inspiration + today */}
